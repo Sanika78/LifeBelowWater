@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="Feedback.css">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="Home.html" class="logo"><img src="images/Home/Sustainable_Development_Goal_14.png"  alt="LOGO" class="logo"></a> 
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="close-icon"></i>
+            <i class='bx bx-x' id="menu-icon"></i>
+        </label>
+        <nav class="navbar">
+            <a href="Home.html" style="--i:0;">HOME <span></span></a>
+            <a href="Gallery.html" style="--i:1;">GALLERY <span></span></a>
+            <a href="Feedback.html" class="active" style="--i:3;">FEEDBACK <span></span></a>
+            <a href="profile.html" style="--i:4;">USER&nbsp;&nbsp;PROFILE <span></span></a>
+            <a href="team.html" style="--i:5;">ABOUT&nbsp;&nbsp;US <span></span></a>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="form">
+            <form action="mailto:always.pasindu@gmail.com" id="form" method="post" enctype="text/plain">
+                <div class="heading"><h2>Leave us a Feedback</h2></div>
+                <br><br>
+                <div class="input-field">
+                    <label for="username" id="LabelText1">Name: </label><br>
+                    <input type="text" name="Name" id="username" placeholder=" Enter your name" required>
+                </div>
+                <br><br>
+                <div class="input-field">
+                    <label for="email" id="LabelText2">Email: </label><br>
+                    <input type="email" id="email" name="email" placeholder=" Enter your email">
+                </div>
+                <br><br>
+                <div class="container1">
+                    <label>Was this your first time visiting?</label><br><br>
+                    <input type="radio" name="First-Visit" value="Yes" required id="yes">
+                    <label for="yes">Yes</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" name="First-Visit" value="No" id="no">
+                    <label for="no">No</label>
+                </div>
+                <br><br>
+                <div class="container2">
+                    <label>Was this website informative & user-friendly?</label><br><br>
+                    <input type="radio" id="Y" name="User-friendly" value="Yes" required>
+                    <label for="Y">Yes</label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" id="N" name="User-friendly" value="No" required>
+                    <label for="N">No</label>
+                    <br><br>
+                    <textarea id="reason" name="Suggestions" rows="5" cols="50" placeholder="Suggest any improvement (if 'No' is selected)"></textarea>
+                </div>
+                <br>
+                <label  id="Rate">Rate Us</label> <br><br>
+                <div class="rating">
+                    <input type="hidden" id="ratingInput" name="rating" value="">
+                    <i class='bx bx-star star' style="--i: 0;"></i>
+                    <i class='bx bx-star star' style="--i: 1;"></i>
+                    <i class='bx bx-star star' style="--i: 2;"></i>
+                    <i class='bx bx-star star' style="--i: 3;"></i>
+                    <i class='bx bx-star star' style="--i: 4;"></i>
+                </div>
+                
+                <textarea id="opinion" name="User-opinion" cols="30" rows="5" placeholder="Describe your experience..." required></textarea>
+                <br><br>
+                <div class="btn-group">
+                    <button type="submit" class="btn-submit">Submit</button>
+                    <button type="reset" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+  
+
+    <script>
+        const stars = document.getElementsByClassName('star');
+        const ratingInput = document.getElementById('ratingInput');
+
+        for (let i = 0; i < stars.length; i++) {
+            stars[i].addEventListener('click', function() {
+                ratingInput.value = i + 1; // Set the rating value
+
+                // Remove 'selected' class from all stars
+                for (let j = 0; j < stars.length; j++) {
+                    stars[j].classList.remove('selected');
+                }
+
+                // Add 'selected' class to the clicked star and all preceding stars
+                for (let j = 0; j <= i; j++) {
+                    stars[j].classList.add('selected');
+                }
+            });
+        }
+    </script>
+    <script src="Feedback.js"></script>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="H3">Contact Us</h3>
+            <div class="elements">
+                <p>Email: <a href="mailto:sanjivaniuniversity@gmail.com">sanjivaniuniversity@gmail.com</a> </p>
+                <p>Phone: <br>+91 1234567890</p>
+                <p>Address: Sanjivani University,Kopargaon </p>
+            </div>
+            </div>
+            <div class="footer-content">
+                <h3 class="H3">Quick Links</h3>
+                 <ul class="list">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Feedback.html">Feedback</a></li>
+                    <li><a href="team.html">About Us</a></li>
+                 </ul>
+            </div>
+            <div class="footer-content">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+                <h3 class="H3">Follow Us</h3>
+                <ul class="social-icons">
+                 <li><a href="https://web.facebook.com/pasishjdh?comment_id=Y29tbWVudDoxNjY3NzY0Mzc3MzAxMjMzXzgzMjA2NDM2ODg3Nzc4OQ%3D%3D" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                 <li><a href="https://x.com/alwaysPasindu" target="_blank"><i class="fab fa-twitter" ></i></a></li>
+                 <li><a href="https://github.com/alwaysPasindu" target="_blank"><i class="fab fa-github" ></i></a></li>
+                 <li><a href="https://www.linkedin.com/in/pasindu-dilshan-929865269/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+                </div>
+        </div>
+   
+</body>
+</html>
